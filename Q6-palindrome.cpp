@@ -1,21 +1,23 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
-int a,i,j,flag=1;
-char arr[100];
-cout<<"Enter any string :";
-cin>>arr;
-for (i=0;arr[i]!='\0';i++);
-j=0;i--;
-while(j<i){
-    if(arr[j]!=arr[i]){
-        printf("not");
-        flag=1;
-        break;
-    }
-j++;i--;
-}
-if(flag=0)printf("pand");
-return 0;
 
+int main() {
+    int num, n, digit, rev = 0;
+    cout << "Enter a positive number: ";
+    cin >> num;
+    n = num;
+
+    while (num != 0) {
+        digit = num % 10;
+        rev = (rev * 10) + digit;
+        num = num / 10;
+    }
+
+    if (n == rev) {
+        cout << n << " is a palindrome." << endl;
+    } else {
+        cout << n << " is not a palindrome." << endl;
+    }
+
+    return 0;
 }
