@@ -8,10 +8,11 @@ int main() {
 
     while (n != 0) {
         rem = n % 10;
-        reverse = reverse * 10 + rem;
-        n /= 10;
+        cout<<rem;
+        // reverse = reverse * 10 + rem;
+        n = n / 10;
     }
-
-    cout << "Reversed Number = " << reverse;
+    //cout << "Reversed Number = " << reverse;
+    
     return 0;
 }
